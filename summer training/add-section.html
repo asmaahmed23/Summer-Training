@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>ادخال الشعب الدراسية</title>
+
+<style>
+
+ul {   
+	
+    list-style-type: none;
+  
+  margin: 0;
+  
+  padding: 0;
+  
+  overflow: hidden;
+   
+ background-color: #333;
+
+}
+
+
+li {
+  
+  float: right;
+
+}
+
+
+
+li a {
+  
+  display: inline-block;
+ 
+   color: white;
+  
+  text-align: center;
+  
+  padding: 8px 16px;
+   
+ text-decoration: none;
+
+}
+
+
+
+li a:hover {
+   
+ background-color: #111;
+}
+
+
+th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+	border: 1px solid #ddd;
+	background-color:#f5f5f5;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+	border: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+/* for the green colored days <<<<<===============================================
+
+.weekDays-selector input {
+  display: none!important;
+}
+
+.weekDays-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 30px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weekDays-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+*/
+</style>
+</head>
+<body>
+
+<header>
+
+	<center><a href = "main page.html"><img src ="12.png" alt = "logo image" style ="height:500; width: 500;"></a></center>
+	<ul>
+		<li><a class="active" href="main page.html">الصفحة الرئيسيه</a></li>
+		<li><a href="login.html">تسجيل الدخول</a></li>
+		<li><a class="active" href="">معلومات عن الخدمة</a></li>
+	</ul>
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</header>
+
+<table style="margin: 0 auto; border-collapse: collapse; border: 1px solid #ddd;">
+	
+		
+
+    <tr>
+		<th>الى</th>
+		<th>من</th>
+		<th>الايام</th>
+		<th>رمز الشعبة</th>
+		<th>رمز المادة</th>
+		<th>اسم المادة</th>
+		<th>الترم الدراسي</th>
+		<th>السنة الدراسية</th>
+	</tr>
+	<td> 
+		<input type="time" id="section-to-time" name="section-to-time" required /> </td>
+	<td> 
+		<input type="time" id="section-from-time" name="section-from-time" required /> </td>
+	<td> 
+		<!-- 
+		<div class="weekDays-selector">
+			<input type="checkbox" id="weekday-sun" class="weekday" />
+			  <label for="weekday-sun">U</label>
+			<input type="checkbox" id="weekday-mon" class="weekday" />
+			  <label for="weekday-mon">M</label>
+			<input type="checkbox" id="weekday-tue" class="weekday" />
+			  <label for="weekday-tue">T</label>
+			<input type="checkbox" id="weekday-wed" class="weekday" />
+			  <label for="weekday-wed">W</label>
+			<input type="checkbox" id="weekday-thu" class="weekday" />
+			  <label for="weekday-thu">R</label>
+			<input type="checkbox" id="weekday-fri" class="weekday" />
+			  <label for="weekday-fri">F</label>
+			<input type="checkbox" id="weekday-sat" class="weekday" />
+			  <label for="weekday-sat">S</label>
+		</div>
+		-->
+		<form action="/action_page.php" style ="align:left;">
+		  <input type="checkbox" name="weekday" value="sunday">Sunday<br>
+		  <input type="checkbox" name="weekday" value="monday">Monday<br>
+		  <input type="checkbox" name="weekday" value="tuesday">Tuesday<br>
+		  <input type="checkbox" name="weekday" value="wednesday">Wednesday<br>
+		  <input type="checkbox" name="weekday" value="thursday">Thursday<br>
+		  <input type="checkbox" name="weekday" value="friday">Friday<br>
+		  <input type="checkbox" name="weekday" value="saturday">Saturday<br>
+		</form>
+	</td>
+	<td>  <input type="datetime"  id="رمز الشعبة" > </td>
+	<td>  <input type="datetime"  id="رمز المادة"> </td>
+	<td>  <input type="datetime"  id="اسم المادة" > </td>
+	<td>  <input type="datetime"  id="الترم الدراسي" > </td>
+	<td>  <input type="datetime"  id="السنة الدراسية" > </td>
+			</tr>
+		
+	
+</table>
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+
+ <center><input type="button" value="تسجيل"  onclick="check_Validation()"> 	<input type="button" value="اضافة شعب اخرى"  onclick="check_Validation()"> </center>
+	
+
+ 
+
+
+
+
+</body>
+
+</html>
